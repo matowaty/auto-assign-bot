@@ -1,5 +1,5 @@
-var Discord = require('discord.js');
-var bot = new Discord.Client();
+const Discord = require('discord.js');
+const bot = new Discord.Client();
 
 bot.on('message', message => {
 
