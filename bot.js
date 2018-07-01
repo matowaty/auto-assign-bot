@@ -1,7 +1,7 @@
-const Discord = require('discord.js');
-const bot = new Discord.Client();
+var Discord = require('discord.js');
+var bot = new Discord.Client();
 
-client.on('message', message => {
+bot.on('message', message => {
 
   var sender = message.author;
   var msg = message.content.toUpperCase();
@@ -14,7 +14,7 @@ client.on('message', message => {
 });
 
 //user joins Discord.
-client.on('guildMemberAdd', member => {
+bot.on('guildMemberAdd', member => {
   //console.log('User ' + member.user.username + 'has joined the serwer!')
 var role = member.guild.roles.find('name', 'Osadzeni');
 
@@ -22,4 +22,4 @@ member.addRole(role)
 
 });
 
-client.login(process.env.BOT_TOKEN);
+bot.login(process.env.BOT_TOKEN);
